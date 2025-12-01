@@ -1,0 +1,893 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Saurabh Kumar Pandey — MERN Developer</title>
+  <meta name="description" content="Portfolio & resume — Saurabh Kumar Pandey. MERN / Frontend developer. Selected projects, experience and contact." />
+  <!-- Open Graph (social preview) -->
+  <meta property="og:title" content="Saurabh Kumar Pandey — MERN Developer">
+  <meta property="og:description" content="MERN / frontend developer — portfolio, projects and contact.">
+  <meta property="og:type" content="website">
+  <!-- Fallback image: update path if you have a social preview image -->
+  <meta property="og:image" content="/assets/og-image.png">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="" crossorigin="anonymous" />
+
+  <style>
+    /* ========== VARIABLES & RESET ========== */
+    :root{
+      --bg: #f7f9fb;
+      --card: #ffffff;
+      --muted: #6b7280;
+      --text: #0f172a;
+      --accent: #2563eb;
+      --accent-600: #1e4fc4;
+      --glass: rgba(255,255,255,0.7);
+      --radius: 12px;
+      --shadow: 0 8px 24px rgba(16,24,40,0.08);
+      --max-width: 1100px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,#f7fafc 0%, var(--bg) 100%);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      padding-bottom:60px;
+    }
+
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .wrap{
+      width: min(96%, var(--max-width));
+      margin: 28px auto;
+    }
+
+    /* ========== HEADER ========== */
+    .header{
+      display:flex;
+      gap:16px;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:30px;
+      position:relative;
+    }
+
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+
+    .logo{
+      width:56px;height:56px;border-radius:10px;
+      background:linear-gradient(135deg,#1f2937,#4f46e5);
+      color:#fff;display:flex;align-items:center;justify-content:center;
+      font-weight:800;font-size:1.1rem;
+      box-shadow:0 6px 18px rgba(79,70,229,0.12);
+    }
+
+    .brand-meta .name{font-weight:700}
+    .brand-meta .muted{color:var(--muted);font-size:0.9rem}
+
+    .nav{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      flex:1;
+      justify-content:center;
+    }
+
+    .nav a{
+      padding:8px 10px;
+      border-radius:8px;
+      color:var(--text);
+      font-weight:600;
+      font-size:0.95rem;
+    }
+    .nav a:hover{background: rgba(37,99,235,0.06); color:var(--accent)}
+
+    .header-actions{
+      display:flex;gap:10px;align-items:center;
+    }
+
+    .btn-outline, .btn-primary, .btn-ghost {
+      border-radius:10px;
+      padding:8px 12px;
+      font-weight:700;
+      text-decoration:none;
+      display:inline-flex;align-items:center;gap:8px;
+      cursor:pointer;
+      border:2px solid transparent;
+      font-size:0.95rem;
+    }
+    .btn-outline{background:transparent;border-color:var(--accent); color:var(--accent)}
+    .btn-outline:hover{background:var(--accent); color:#fff}
+    .btn-primary{background:var(--accent); color:#fff; border-color:var(--accent)}
+    .btn-primary:hover{background:var(--accent-600); border-color:var(--accent-600)}
+    .btn-ghost{background:transparent;color:var(--muted);border:1px solid rgba(16,24,40,0.04)}
+
+    .menu-btn{display:none;border-radius:8px;padding:6px 10px;background:transparent;border:1px solid rgba(0,0,0,0.06)}
+
+    /* ========== HERO SECTION ========== */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 26px;
+  align-items: start;
+  margin-bottom: 50px;
+}
+
+/* Card styling */
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: var(--shadow);
+  border: 1px solid #e7ebf1;
+}
+
+/* Left side */
+.hero-left .big {
+  font-size: 2.1rem;
+  margin: 0 0 10px 0;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.lead {
+  margin: 0 0 18px 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+/* Contact meta list */
+.meta {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0 0;
+  color: var(--muted);
+}
+
+.meta li {
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+/* Tech badges */
+.tech-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.tech {
+  background: #eef2ff;
+  padding: 7px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 0.85rem;
+}
+
+/* ========== Right Side (Profile) ========== */
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Profile Card */
+.profile {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  padding: 22px;
+}
+
+/* Larger profile image */
+.avatar-img {
+  width: 117px;
+  height: 189px;
+  border-radius: 14px;
+  object-fit: cover;
+  border: 3px solid #e5e7eb;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Stats */
+.profile-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat strong {
+  font-size: 1.15rem;
+}
+
+.stat .label {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+/* Quick links */
+.quick-links h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.quick-links .link {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+
+    /* ========== PROJECTS ========== */
+    #projects{margin-top:18px}
+    #projects h2{text-align:center;margin-bottom:28px;font-size:1.6rem}
+
+    .project-list{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:20px;
+    }
+    @media(min-width:900px){
+      .project-list{grid-template-columns: 1fr 1fr}
+      .hero{grid-template-columns: 1fr 360px}
+      .wrap{width:min(94%,1200px)}
+    }
+
+    .project.card{display:flex;flex-direction:column;gap:12px;padding:18px}
+    .project-visual{
+      width:100%;height:220px;border-radius:10px;overflow:hidden;background:#f3f4f6;display:flex;align-items:center;justify-content:center;
+    }
+    .project-visual img{width:100%;height:100%;object-fit:cover;display:block}
+
+    .project-body h3{margin:0 0 6px 0;font-size:1.05rem}
+    .muted{color:var(--muted);font-size:0.95rem}
+    .block-list{margin:10px 0 0 18px;color:#374151}
+    .block-list li{margin-bottom:8px}
+
+    .project-actions{display:flex;gap:10px;margin-top:12px}
+
+    /* make sure images not overflow on small screens */
+    img{max-width:100%;height:auto;display:block}
+
+    /* ========== TIMELINE / EXPERIENCE ========== */
+    .section{margin-top:40px}
+    .timeline{display:grid;gap:14px}
+    .timeline-item{padding:16px}
+    .timeline-head{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:8px}
+    .small-muted{color:var(--muted);font-size:0.9rem}
+
+    /* ========== EDUCATION / SKILLS / EXTRAS ========== */
+    .edu-grid{display:grid;gap:12px}
+    @media(min-width:768px){.edu-grid{grid-template-columns:repeat(3,1fr)}}
+    .edu{padding:14px}
+
+    .skill-cloud{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{background:#eef2ff;padding:8px 10px;border-radius:999px;font-weight:600;color:#1f2937;font-size:0.9rem}
+
+    .extras-grid{display:grid;gap:14px}
+    @media(min-width:800px){.extras-grid{grid-template-columns:1fr 1fr}}
+
+    /* ========== CONTACT ========== */
+    .contact-grid{display:grid;gap:18px}
+    @media(min-width:900px){.contact-grid{grid-template-columns:1fr 320px}}
+    .contact-form input,.contact-form textarea{
+      width:100%;padding:12px;border-radius:10px;border:1px solid #e6eef8;margin-bottom:10px;font-size:0.95rem
+    }
+    .form-actions{display:flex;gap:10px;align-items:center}
+
+    /* ========== FOOTER ========== */
+    .footer{margin-top:34px;padding:18px;text-align:center;color:var(--muted);font-size:0.95rem}
+
+    /* ========== RESPONSIVE NAV (small screens) ========== */
+    @media(max-width:880px){
+      .nav{display:none}
+      .menu-btn{display:inline-block}
+    }
+
+    /* small utilities */
+    .sr-only{position:absolute;left:-9999px}
+
+    .avatar-img {
+  width: 117px;
+  height: 189px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- HEADER -->
+    <header class="header" role="banner">
+      <div class="brand" aria-hidden="false">
+        <div class="logo" aria-hidden="true">SK</div>
+        <div class="brand-meta">
+          <div class="name">Saurabh Kumar Pandey</div>
+          <div class="muted">MERN Stack Developer</div>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#hero">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#extras">Extras</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggle" class="btn-outline" title="Toggle theme (demo)">🌗</button>
+        <a id="pdfCv" class="btn-outline" href="Saurabh pandey resume.pdf" download>Resume (PDF)</a>
+        <button class="menu-btn" aria-label="Open menu" id="menuBtn">☰</button>
+      </div>
+    </header>
+
+    <!-- HERO -->
+<section id="hero" class="hero" aria-labelledby="hero-heading">
+  <div class="hero-left card">
+    <h1 id="hero-heading" class="big">
+      Hi — I'm <span class="accent">Saurabh Kumar Pandey</span>
+    </h1>
+
+    <p class="lead muted">
+      I build scalable web applications and polished user interfaces using the MERN stack.
+      I focus on performance, accessibility and developer experience.
+    </p>
+
+    <div class="hero-cta">
+      <a id="cvBtn" class="btn-primary" href="Saurabh pandey resume.pdf" download>
+        Download CV (PDF)
+      </a>
+      <a href="#projects" class="btn-ghost">See work</a>
+    </div>
+
+    <ul class="meta">
+      <li><span>📍</span> Ranchi, India</li>
+      <li><span>📞</span> +91-9031483141</li>
+      <li><span>✉️</span> 
+        <a class="inline-link" href="mailto:saurabhkumarpandey811@email.com">
+          saurabhkumarpandey811@email.com
+        </a>
+      </li>
+      <li><span>🔗</span>
+        <a class="inline-link" href="https://linkedin.com/in/saurabh-pandey8298" target="_blank">
+          /saurabh-pandey8298
+        </a>
+      </li>
+    </ul>
+
+    <div class="tech-row">
+      <span class="tech">React</span>
+      <span class="tech">Node.js</span>
+      <span class="tech">Express</span>
+      <span class="tech">MongoDB</span>
+    </div>
+  </div>
+
+  <aside class="hero-right">
+    <div class="profile card">
+      <img src="mypic.jpg" alt="Saurabh Kumar Pandey" class="avatar-img">
+
+      <div class="profile-meta">
+        <div class="stat">
+          <strong>0 - 1</strong>
+          <div class="label">Years Experience</div>
+        </div>
+
+        <div class="stat">
+          <strong>MERN</strong>
+          <div class="label">Primary Stack</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card quick-links">
+      <h4>Quick Links</h4>
+      <a class="link" id="githubLink" href="https://github.com/SaurabhPandey8" target="_blank">GitHub</a>
+      <a class="link" href="https://linkedin.com/in/saurabh-pandey8298" target="_blank">LinkedIn</a>
+    </div>
+  </aside>
+</section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Selected Projects</h2>
+
+      <div class="project-list">
+
+        <!-- PROJECT CARD 1 -->
+        <article class="project card" aria-labelledby="p1-title">
+          <div class="project-visual">
+            <!-- rename file to remove spaces or use hyphens -->
+            <a href="Screenshot 2025-12-01 193523.png" target="_blank" rel="noopener">
+              <img src="Screenshot 2025-12-01 193523.png" alt="Back To India project preview">
+            </a>
+          </div>
+
+          <div class="project-body">
+            <h3 id="p1-title">Back To India — Community & Services Portal</h3>
+            <p class="muted">Personal project to help Indian returnees find jobs, housing, schools and community resources.</p>
+
+            <ul class="block-list">
+              <li><strong>Role:</strong> Web Development Lead — architecture, UI, interactions.</li>
+              <li><strong>Tech:</strong> HTML, CSS, JavaScript, Node.js, Bootstrap, Swiper.js, LocalStorage (CMS prototype).</li>
+              <li><strong>Highlights:</strong> Swiper-based category slider, CMS-like admin flows, responsive layouts.</li>
+            </ul>
+
+            <div class="project-actions">
+              <a class="btn-outline" href="https://692dc915f2a14317f718cb84--inspiring-crepe-e274cf.netlify.app/" aria-label="BackToIndia live" target="_blank" rel="noopener">Live</a>
+              <a class="btn-primary" href="https://github.com/SaurabhPandey8/Back-To-India-Frontend.git" aria-label="BackToIndia code" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT CARD 2 -->
+        <article class="project card" aria-labelledby="p2-title">
+          <div class="project-visual">
+            <a href="Screenshot 2025-12-01 194233.png" target="_blank" rel="noopener">
+              <img src="Screenshot 2025-12-01 194233.png" alt="Weddingweb project preview">
+            </a>
+          </div>
+
+          <div class="project-body">
+            <h3 id="p2-title">Weddingweb</h3>
+            <p class="muted">A wedding planning and showcase website with galleries and responsive design.</p>
+
+            <ul class="block-list">
+              <li><strong>Features:</strong> Image galleries, video showcases, venue details.</li>
+              <li><strong>Tech:</strong> HTML, CSS, JavaScript.</li>
+            </ul>
+
+            <div class="project-actions">
+              <a class="btn-outline" href="https://cheerful-eclair-48ef18.netlify.app/" target="_blank" rel="noopener">Live</a>
+              <a class="btn-primary" href="https://github.com/SaurabhPandey8/weddingweb" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section" aria-labelledby="exp-heading">
+      <h2 id="exp-heading">Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item card">
+          <div class="timeline-head">
+            <strong>Web Developer Intern</strong>
+            <span class="small-muted">Nyxora Technology Pvt. Ltd. — Jul 2025 – Oct 2025 | Ranchi</span>
+          </div>
+          <ul class="muted-list">
+            <li>Implemented UI components and supported Node/Express backend tasks.</li>
+            <li>Followed best practices, participated in code reviews and CI workflows.</li>
+            <li>Focused on responsive UI and performance optimizations.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item card">
+          <div class="timeline-head">
+            <strong>Web Development Lead</strong>
+            <span class="small-muted">Back To India Project — Jul 2025 – Sep 2025</span>
+          </div>
+          <ul class="muted-list">
+            <li>Led front-end architecture, component design and interactive features.</li>
+            <li>Built Swiper sliders, CMS prototype (localStorage) and consistent UI/UX.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section" aria-labelledby="edu-heading">
+      <h2 id="edu-heading">Education</h2>
+      <div class="edu-grid">
+        <div class="edu card">
+          <strong>Marwari College, Ranchi — BSc. in Information Technology</strong>
+          <div class="muted">2021 – 2024 • CGPA: 8.5</div>
+        </div>
+
+        <div class="edu card">
+          <strong>R K High School (JAC Board) — Intermediate of Science</strong>
+          <div class="muted">2021 • Percentage: 82.40%</div>
+        </div>
+
+        <div class="edu card">
+          <strong>H S V High School CW Japla (JAC Board) — Matriculation</strong>
+          <div class="muted">2019 • Percentage: 84.80%</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Technical Skills</h2>
+      <div class="skill-cloud" aria-hidden="true">
+        <span class="chip">HTML</span>
+        <span class="chip">CSS</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">React</span>
+        <span class="chip">Node.js</span>
+        <span class="chip">Express</span>
+        <span class="chip">MongoDB</span>
+        <span class="chip">Bootstrap</span>
+        <span class="chip">Swiper.js</span>
+        <span class="chip">LocalStorage API</span>
+      </div>
+
+      <h3 style="margin-top:14px">Developer Tools</h3>
+      <div class="block-list">
+        <ul>
+          <li>Visual Studio Code</li>
+          <li>Git & GitHub</li>
+          <li>Chrome DevTools</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EXTRAS -->
+    <section id="extras" class="section" aria-labelledby="extras-heading">
+      <h2 id="extras-heading">Extras</h2>
+      <div class="extras-grid">
+        <div class="card extras-card">
+          <h3>Positions & Achievements</h3>
+          <ul class="extras-list">
+            <li>Web Development Lead — Back To India Project (Jul 2025 – Sep 2025)</li>
+            <li>Completed Web Development Internship at Nyxora Technology Pvt. Ltd.</li>
+          </ul>
+        </div>
+
+        <div class="card extras-card">
+          <h3>Coursework & Interests</h3>
+          <ul class="extras-list">
+            <li>Web Technologies, Database Management Systems</li>
+            <li>Interests: MERN Stack, UI/UX, Performance</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <div class="contact-grid">
+        <form id="contactForm" class="contact-form card" novalidate>
+          <label class="sr-only" for="cname">Name</label>
+          <input id="cname" name="name" placeholder="Your name" required>
+
+          <label class="sr-only" for="cemail">Email</label>
+          <input id="cemail" name="email" type="email" placeholder="Your email" required>
+
+          <label class="sr-only" for="cmessage">Message</label>
+          <textarea id="cmessage" name="message" rows="5" placeholder="Tell me about your project" required></textarea>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">Send message</button>
+            <button type="button" id="resetBtn" class="btn-ghost">Reset</button>
+          </div>
+
+          <div id="formMsg" class="muted" aria-live="polite" style="margin-top:10px"></div>
+        </form>
+
+        <aside class="contact-info card">
+          <h4>Get in touch</h4>
+          <p class="muted">Phone: +91-9031483141</p>
+          <p class="muted">Email: <a href="mailto:saurabhkumarpandey811@email.com">saurabhkumarpandey811@email.com</a></p>
+          <p class="muted">Location: Ranchi, India</p>
+          <div style="margin-top:10px"><a class="btn-outline" href="Saurabh pandey resume.pdf" download>Download Resume (PDF)</a></div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  // Initialize EmailJS
+  (function() {
+    emailjs.init("BbnyooMXtGCi59nZf"); // 👉 Replace this
+  })();
+
+  const contactForm = document.getElementById("contactForm");
+  const formMsg = document.getElementById("formMsg");
+  const resetBtn = document.getElementById("resetBtn");
+
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    formMsg.textContent = "Sending...";
+
+    // Send these to your Gmail via EmailJS
+    const params = {
+      to_email: "saurabhkumarpandey811@gmail.com",   // 👉 YOUR EMAIL HERE
+      from_name: document.getElementById("cname").value,
+      from_email: document.getElementById("cemail").value,
+      message: document.getElementById("cmessage").value
+    };
+
+    // Send EmailJS request
+    emailjs.send(
+      "service_z9t6zrs",   // 👉 Replace this
+      "template_dngiiga",  // 👉 Replace this
+      params
+    )
+    .then(() => {
+      formMsg.textContent = "Message sent successfully! I will get back to you soon.";
+      contactForm.reset();
+    })
+    .catch((error) => {
+      console.error("EmailJS Error:", error);
+      formMsg.textContent = "Failed to send message. Please try again.";
+    });
+  });
+
+  // Reset button
+  resetBtn.addEventListener("click", () => {
+    contactForm.reset();
+    formMsg.textContent = "";
+  });
+</script>
+
+    <footer class="footer">
+      <div>© <span id="year"></span> Saurabh Kumar Pandey — Built with MERN</div>
+      <div style="margin-top:6px"><a href="https://github.com/SaurabhPandey8" target="_blank" rel="noopener">GitHub</a></div>
+    </footer>
+
+  </div>
+
+  <script>
+    // small helpers and UX
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle (simple)
+    const menuBtn = document.getElementById('menuBtn');
+    let navOpen = false;
+    menuBtn && menuBtn.addEventListener('click', () => {
+      const nav = document.querySelector('.nav');
+      if (!nav) return;
+      navOpen = !navOpen;
+      nav.style.display = navOpen ? 'flex' : 'none';
+      nav.style.flexDirection = 'column';
+      nav.style.position = 'absolute';
+      nav.style.top = '72px';
+      nav.style.right = '18px';
+      nav.style.background = 'white';
+      nav.style.padding = '12px';
+      nav.style.borderRadius = '10px';
+      nav.style.boxShadow = '0 10px 30px rgba(16,24,40,0.08)';
+    });
+
+    // theme toggle (simple demo switching background)
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle && themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      if (document.body.classList.contains('dark-mode')) {
+        document.documentElement.style.setProperty('--bg','#0b1220');
+        document.documentElement.style.setProperty('--card','#071024');
+        document.documentElement.style.setProperty('--text','#e6eef8');
+        document.documentElement.style.setProperty('--muted','#9aa7bf');
+      } else {
+        // reset to defaults
+        document.documentElement.style.removeProperty('--bg');
+        document.documentElement.style.removeProperty('--card');
+        document.documentElement.style.removeProperty('--text');
+        document.documentElement.style.removeProperty('--muted');
+      }
+    });
+
+    // Improve image loading priority: if images missing, add placeholder
+    document.querySelectorAll('img').forEach(img => {
+      img.addEventListener('error', () => {
+        img.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450"><rect width="100%" height="100%" fill="%23eef2f7"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="%239aa4b2" font-size="20">Image not found</text></svg>';
+      });
+    });
+  </script>
+  <script>
+  const btn = document.getElementById("menuBtn");
+  const nav = document.querySelector(".nav");
+
+  btn.addEventListener("click", () => {
+    nav.classList.toggle("show");
+  });
+</script>
+<style>
+  /* ============================================
+   GLOBAL MOBILE IMPROVEMENTS
+============================================ */
+.wrap {
+  width: min(94%, 1100px);
+  margin: 20px auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Prevent overflow everywhere */
+.card {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ============================================
+   HERO RESPONSIVENESS
+============================================ */
+@media (max-width: 950px) {
+  .hero {
+    grid-template-columns: 1fr;
+    margin-bottom: 30px;
+  }
+
+  .hero-right {
+    order: -1; /* Profile comes first on mobile */
+  }
+
+  .profile {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .avatar-img {
+    width: 90px;
+    height: 140px;
+  }
+
+  .profile-meta {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-left .big {
+    font-size: 1.7rem;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ============================================
+   NAVIGATION (MOBILE MENU)
+============================================ */
+@media (max-width: 880px) {
+  .nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: var(--card);
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 12px;
+    width: 200px;
+    box-shadow: var(--shadow);
+  }
+
+  .nav.show {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 10px;
+    text-align: left;
+    width: 100%;
+  }
+
+  .menu-btn {
+    display: inline-block;
+  }
+}
+
+/* ============================================
+   PROJECT GRID
+============================================ */
+@media (max-width: 900px) {
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+
+  .project-visual {
+    height: 180px;
+  }
+}
+
+@media (max-width: 500px) {
+  .project-visual {
+    height: 150px;
+  }
+}
+
+/* ============================================
+   EXPERIENCE / TIMELINE
+============================================ */
+@media (max-width: 650px) {
+  .timeline-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .small-muted {
+    font-size: 0.85rem;
+  }
+}
+
+/* ============================================
+   EDUCATION GRID
+============================================ */
+@media (max-width: 768px) {
+  .edu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   EXTRAS GRID
+============================================ */
+@media (max-width: 800px) {
+  .extras-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   CONTACT GRID
+============================================ */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+</style>
+</body>
+</html>
